@@ -4,6 +4,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
         // home page
         .when('/', {
+            templateUrl: 'views/form.html',
+            controller: 'FormController'
+        })
+
+        .when('/home', {
             templateUrl: 'views/home.html',
             controller: 'MainController'
         })
