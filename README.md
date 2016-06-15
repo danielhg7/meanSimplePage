@@ -1,1 +1,1 @@
-# firstGitRepo
+# A MEAN Stack Simple Application
