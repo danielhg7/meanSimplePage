@@ -3,6 +3,7 @@ angular.module('NerdService', []).factory('Nerd', ['$http', function($http) {
     return {
         // call to get all nerds
         get : function() {
+            console.log("Entro en el Servicio");
             return $http.get('/api/nerds');
         },
 

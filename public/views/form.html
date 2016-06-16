@@ -1,16 +1,18 @@
 <div class="jumbotron text-center">
     <h1>Welcome!</h1>
-	<div class="form-group col-lg-6">
-	  <label for="usr">Name:</label>
-	  <input type="text" placeholder="name" class="form-control" id="usr">
-	</div>
-	<div class="form-group col-lg-6">
-	  <label for="pwd">Contraseña:</label>
-	  <input type="password" placeholder="contraseña" class="form-control" id="pwd">
-	</div>
-	<div class="form-group">
-	  <input type="submit" class="btn btn-success" value="Iniciar Sesión">
-	</div>
+	<form action="/signin" method="POST">
+		<div class="form-group col-lg-6">
+		  <label for="usr">Name:</label>
+		  <input type="text" placeholder="name" class="form-control" id="usr" name="name">
+		</div>
+		<div class="form-group col-lg-6">
+		  <label for="pwd">Contraseña:</label>
+		  <input type="password" placeholder="contraseña" class="form-control" id="pwd" name="password">
+		</div>
+		<div class="form-group">
+		  <input type="submit" class="btn btn-success" value="Iniciar Sesión">
+		</div>
+	</form>
 	<div class="form-group">
 	  <input type="submit" class="btn btn-info" value="Recuperar Contraseña">
 	</div>
