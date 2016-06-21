@@ -10,6 +10,7 @@ module.exports = function(app) {
     // sample api route
     app.get('/api/nerds', function(req, res) {
         // use mongoose to get all nerds in the database
+        console.log("Paso por aqui")
         Nerd.find(function(err, nerds) {
 
             // if there is an error retrieving, send the error. 
@@ -17,6 +18,7 @@ module.exports = function(app) {
             if (err)
                 res.send(err);
 
+            console.log("Paso por aqui")
             res.json(nerds); // return all nerds in JSON format
         });
     });
