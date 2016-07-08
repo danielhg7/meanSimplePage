@@ -5,7 +5,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         // home page
         .when('/', {
             templateUrl: 'views/form.html',
-            controller: 'FormController'
+            controller: 'AuthController'
         })
 
         .when('/home', {

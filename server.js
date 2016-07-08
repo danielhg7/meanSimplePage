@@ -13,9 +13,13 @@ var db = require('./config/db');
 // set our port
 var port = process.env.PORT || 3000; 
 
+var router = express.Router();
+
+app.use(router);
+
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
-console.log("Vamos");
+console.log(db.url)
 mongoose.connect(db.url); 
 
 // get all data/stuff of the body (POST) parameters
