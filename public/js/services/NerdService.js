@@ -2,7 +2,7 @@ angular.module('NerdService', []).factory('Nerd', ['$http', '$resource', functio
 
     return $resource('/api/nerds/:id', null,
     {
-        'get': { method:'GET'},
+        'get': { method:'GET', isArray:true},
         'save': { method:'POST'},
         'query': {method:'GET', isArray:true},
         'update':{ method:'PUT'},

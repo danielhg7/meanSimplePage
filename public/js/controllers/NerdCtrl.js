@@ -4,7 +4,7 @@ angular.module('NerdCtrl', []).controller('NerdController', function($scope, Ner
 
     Nerd.get(function(data) {
 		$scope.nerds = data;
-		console.log($scope.nerds.name);
+		console.log($scope.nerds);
 	});
 
     //$scope.service = $nerdService;
