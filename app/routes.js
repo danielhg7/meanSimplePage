@@ -44,14 +44,15 @@ module.exports = function(app) {
         
         var user = new User();  // create a new instance of the Bear model
         console.log(req.body);
-        user.name = req.body.user.name;
-        user.password = 'default';  // set the bears name (comes from the request)
+        user.name = req.body.name;
+        user.password = req.body.password;  // set the bears name (comes from the request)
 
         // save the bear and check for errors
         user.save(function(err) {
             if (err)
                 res.send(err);
 
+            console.log("Y entonces");
             res.json({ message: 'User Registered!' });
         });
         

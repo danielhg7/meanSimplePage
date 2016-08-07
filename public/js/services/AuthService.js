@@ -1,8 +1,9 @@
-angular.module('AuthService', []).factory('Auth', ['$http', '$resource', function($http, $resource) {
+angular.module('AuthService', []).factory('Auth', ['$http', function($http) {
 
     return {
         login:function(credentials){
-                $http({method:'POST', url: '/signin', params:credentials})
+        		console.log(credentials)
+                $http.post('/signin', {name:credentials.name, password:credentials.password})
         }
     }
 
