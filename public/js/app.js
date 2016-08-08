@@ -1,1 +1,1 @@
-angular.module('sampleApp', ['ngResource', 'ngRoute', 'appRoutes', 'AuthCtrl', 'MainCtrl', 'NerdCtrl', 'NerdService', 'AuthService']);
+angular.module('apreakApp', ['ngResource', 'ngRoute', 'appRoutes', 'AuthCtrl', 'MainCtrl', 'NerdCtrl', 'RegisterCtrl', 'NerdService', 'AuthService', 'RegisterService']);

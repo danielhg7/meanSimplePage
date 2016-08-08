@@ -58,6 +58,26 @@ module.exports = function(app) {
         
     });
 
+    app.post('/register', function(req, res) {
+        
+        var user = new User();  // create a new instance of the Bear model
+        console.log(req.body);
+        user.name = req.body.data.name;
+        user.lastname = req.body.data.lastname;
+        user.email = req.body.data.email;
+        user.username = req.body.data.username;
+        user.password = req.body.data.password;  // set the bears name (comes from the request)
+
+        // save the bear and check for errors
+        user.save(function(err) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'User Registered!' });
+        });
+        
+    });
+
     // route to handle creating goes here (app.post)
     // route to handle delete goes here (app.delete)
 

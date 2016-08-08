@@ -8,6 +8,9 @@ var Schema =   mongoose.Schema;
 // create schema
 var userSchema   = new Schema({
     name: String,
+    lastname: String,
+    email: String,
+    username: String,
     password: String
 });
 // create model if not exists.
