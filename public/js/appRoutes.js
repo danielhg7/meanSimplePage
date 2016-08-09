@@ -8,11 +8,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             controller: 'AuthController'
         })
 
-        .when('/home', {
-            templateUrl: 'views/home.html',
-            controller: 'MainController'
-        })
-
         // nerds page that will use the NerdController
         .when('/nerds', {
             templateUrl: 'views/nerd.html',
