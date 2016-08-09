@@ -1,11 +1,32 @@
-angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'ui.router', 'appRoutes', 'AuthCtrl', 'RegisterCtrl', 'AuthService', 'RegisterService'])
+angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'ui.router', 'AuthCtrl', 'RegisterCtrl', 'CoursesCtrl', 'AuthService', 'RegisterService'])
 	
 
-	.config(function ($stateProvider, toastrConfig) {
+	.config(function ($stateProvider, toastrConfig, $routeProvider, $locationProvider) {
 		angular.extend(toastrConfig, {
   			positionClass: 'toast-bottom-right'
   		});
-  	
+  		
+  		$routeProvider
+
+        // home page
+        .when('/', {
+            templateUrl: 'views/form.html',
+            controller: 'AuthController'
+        })
+
+        .when('/register', {
+            templateUrl: 'views/register.html',
+            controller: 'RegisterController'
+        })
+
+        .when('/courses', {
+            templateUrl: 'views/courses.html',
+            controller: 'CoursesController'
+        })
+
+        .otherwise({ redirectTo: '/'});
+
+    	$locationProvider.html5Mode(true);
 
 	  	$stateProvider
     		.state('anon', {
