@@ -40,11 +40,11 @@ module.exports = function(app) {
         
     });
 
-    app.post('/signin', function(req, res) {
+    app.get('/signin', function(req, res) {
         
         var user = new User();  // create a new instance of the Bear model
         console.log(req.body);
-        user.name = req.body.name;
+        user.username = req.body.username;
         user.password = req.body.password;  // set the bears name (comes from the request)
 
         // save the bear and check for errors
@@ -52,8 +52,7 @@ module.exports = function(app) {
             if (err)
                 res.send(err);
 
-            console.log("Y entonces");
-            res.json({ message: 'User Registered!' });
+            res.json({ message: 'User Logged In!' });
         });
         
     });

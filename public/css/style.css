@@ -1,0 +1,21 @@
+.navbar-inverse{
+	background-color: #002e77;
+	color: #fff;
+}
+
+.navbar-inverse .navbar-brand{
+	color: white;
+}
+
+.jumbotron{
+	background-color: #90B7F4;
+}
+
+.btn-info{
+	margin-top: 10px;
+	background-color: #002e77;
+}
+
+.btn-success{
+	margin-top: 20px;
+}
