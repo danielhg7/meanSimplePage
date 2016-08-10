@@ -1,14 +1,15 @@
 {
-    "name": "starter-node-angular",
-    "version": "1.0.0",
-    "dependencies": {
-        "bootstrap": "latest",
-        "font-awesome": "latest",
-        "animate.css": "latest",
-        "angular": "latest",
-        "angular-route": "latest",
-        "angular-resource": "latest",
-        "angular-toastr": "~1.5.0",
-        "angular-ui-router": "~0.2.13"
-    }
+  "name": "starter-node-angular",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "angular-toastr": "~1.5.0",
+    "angular-ui-router": "~0.2.13",
+    "angular-file-model": "^0.3.1"
+  }
 }

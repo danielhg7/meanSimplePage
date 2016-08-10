@@ -1,4 +1,4 @@
-angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'ui.router', 'AuthCtrl', 'RegisterCtrl', 'CoursesCtrl', 'AuthService', 'RegisterService'])
+angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'file-model', 'ui.router', 'AuthCtrl', 'RegisterCtrl', 'CoursesCtrl', 'AuthService', 'RegisterService'])
 	
 
 	.config(function ($stateProvider, toastrConfig, $routeProvider, $locationProvider) {
@@ -21,6 +21,11 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'ui
 
         .when('/courses', {
             templateUrl: 'views/courses.html',
+            controller: 'CoursesController'
+        })
+
+        .when('/courses/create', {
+            templateUrl: 'views/courses/create.html',
             controller: 'CoursesController'
         })
 
