@@ -1,4 +1,4 @@
-angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'file-model', 'ui.router', 'AuthCtrl', 'RegisterCtrl', 'CoursesCtrl', 'AuthService', 'RegisterService'])
+angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'file-model', 'ui.router', 'AuthCtrl', 'RegisterCtrl', 'CoursesCtrl', 'AuthService', 'RegisterService', 'CourseService'])
 	
 
 	.config(function ($stateProvider, toastrConfig, $routeProvider, $locationProvider) {

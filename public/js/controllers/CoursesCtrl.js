@@ -4,7 +4,7 @@ angular.module('CoursesCtrl', []).controller('CoursesController', function($scop
 
 	$scope.createCourse = function() {
 		Course.create($scope.course, function(data) {
-
+		});
 	}
 
 });
