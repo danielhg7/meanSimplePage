@@ -8,8 +8,8 @@ var Schema =   mongoose.Schema;
 // create schema
 var courseSchema   = new Schema({
     name: String,
-    flag: Buffer,
     numberOfModules: Number
+    
 });
 // create model if not exists.
-module.exports = mongoose.model('Course', userSchema);
+module.exports = mongoose.model('Course', courseSchema);

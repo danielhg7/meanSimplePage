@@ -1,5 +1,6 @@
 // grab the nerd model we just created
 var User = require('./models/user');
+var Course = require('./models/course');
 
 module.exports = function(app) {
 
@@ -26,15 +27,14 @@ module.exports = function(app) {
 
     app.post('/register', function(req, res) {
         
-        var user = new User();  // create a new instance of the Bear model
+        var user = new User();
         console.log(req.body);
         user.name = req.body.data.name;
         user.lastname = req.body.data.lastname;
         user.email = req.body.data.email;
         user.username = req.body.data.username;
-        user.password = req.body.data.password;  // set the bears name (comes from the request)
+        user.password = req.body.data.password;
 
-        // save the bear and check for errors
         user.save(function(err) {
             if (err)
                 res.send(err);
@@ -46,14 +46,12 @@ module.exports = function(app) {
 
     app.post('/courses', function(req, res) {
         
-        var course = new Course();  // create a new instance of the Bear model
+        var course = new Course();
         console.log(req.body);
-        course.name = req.body.data.name;
-        course.lastname = req.body.data.numberOfModules;
-        course.flag = req.body.data.flag;
+        course.name = req.body.name;
+        course.numberOfModules = req.body.numberOfModules;
 
-        // save the bear and check for errors
-        user.save(function(err) {
+        course.save(function(err) {
             if (err)
                 res.send(err);
 
