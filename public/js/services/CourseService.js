@@ -6,7 +6,7 @@ angular.module('CourseService', []).factory('Course', ['$resource', function($re
 
         query:{
             method:'GET',
-            isArray: false
+            isArray: true
         },
 
         get:{

@@ -29,6 +29,11 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'fi
             controller: 'CourseController'
         })
 
+        .when('/courses/show', {
+            templateUrl: 'views/courses/show.html',
+            controller: 'CourseController'
+        })
+
         .otherwise({ redirectTo: '/'});
 
     	$locationProvider.html5Mode(true);
@@ -52,6 +57,18 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'fi
 				url: '/register',
 				templateUrl: 'public/views/register.html',
 				controller: 'RegisterCtrl'
+			})
+
+			.state('anon.course', {
+				url: '/course',
+				templateUrl: 'public/views/courses.html',
+				controller: 'CourseCtrl'
+			})
+
+			.state('anon.course.show', {
+				url: '/course/show',
+				templateUrl: 'public/views/courses/show.html',
+				controller: 'CourseCtrl'
 			})
 
 	});

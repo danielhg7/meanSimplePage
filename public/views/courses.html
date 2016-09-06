@@ -4,69 +4,69 @@
     </div>
     <div class="col-lg-12">
     	<div class="row">
-	    	<form name="registerForm" role="form" novalidate ng-submit="register()">
-				<div class="col-lg-5 jumbotron">
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="assets/images/Flag_of_Spain.png" class="img-thumbnail" alt="Cinque Terre">
-						</div>
-						<div class="col-lg-6">
-							<h3>Español</h3>
-						</div>
+    		<div ng-repeat="course in courses">
+			  {{course.name}}
+			</div>
+    		<div class="col-lg-5 jumbotron" id="englishCourse" ng-click="alertExample()">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_the_United_States.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>English</h3>
 					</div>
 				</div>
-				<div class="col-lg-5 col-lg-offset-2 jumbotron">
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="assets/images/Flag_of_France.png" class="img-thumbnail" alt="Cinque Terre">
-						</div>
-						<div class="col-lg-6">
-							<h3>Français</h3>
-						</div>
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 jumbotron">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_Spain.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>Español</h3>
 					</div>
 				</div>
-				<div class="col-lg-5 jumbotron">
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="assets/images/Flag_of_Portugal.png" class="img-thumbnail" alt="Cinque Terre">
-						</div>
-						<div class="col-lg-6">
-							<h3>Português</h3>
-						</div>
+			</div>
+			<div class="col-lg-5 jumbotron">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_France.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>Français</h3>
 					</div>
 				</div>
-				<div class="col-lg-5 col-lg-offset-2 jumbotron">
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="assets/images/Flag_of_Italy.png" class="img-thumbnail" alt="Cinque Terre">
-						</div>
-						<div class="col-lg-6">
-							<h3>Italiano</h3>
-						</div>
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 jumbotron">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_Portugal.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>Português</h3>
 					</div>
 				</div>
-				<div class="col-lg-5 jumbotron">
-					<div class="row">
-						<div class="col-lg-6">
-							<img src="assets/images/Flag_of_Germany.png" class="img-thumbnail" alt="Cinque Terre">
-						</div>
-						<div class="col-lg-6">
-							<h3>Deutsch</h3>
-						</div>
+			</div>
+			<div class="col-lg-5 jumbotron">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_Italy.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>Italiano</h3>
 					</div>
 				</div>
-				<div class="col-lg-5 col-lg-offset-2 jumbotron">
-					<div class="form-group">
-					  <label for="repwd">Retype Password:</label>
-					  <input type="password" placeholder="Retype Password" class="form-control" id="repwd" name="repassword" ng-model="user.repassword">
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 jumbotron">
+				<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_Germany.png" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>Deutsch</h3>
 					</div>
 				</div>
-				<div class="col-lg-12 text-center">
-					<div class="form-group">
-					  <input type="submit" class="btn btn-success" value="Register" style="margin-top: 20px;">
-					</div>
-				</div>
-			</form>
+			</div>
 		</div>
 </div>
 

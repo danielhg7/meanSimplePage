@@ -6,11 +6,11 @@ var mongoose = require('mongoose');
 
 var Schema =   mongoose.Schema;
 // create schema
-var courseSchema   = new Schema({
+var levelSchema   = new Schema({
     name: String,
-    numberOfLevels: Number,
-    creationDate: Date
+    courseName: String,
+    numberOfTopics: Number
+    
 });
-
 // create model if not exists.
-module.exports = mongoose.model('Course', courseSchema);
+module.exports = mongoose.model('Level', levelSchema);

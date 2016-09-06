@@ -1,6 +1,7 @@
 // grab the nerd model we just created
 var User = require('./models/user');
 var Course = require('./models/course');
+var Level = require('./models/level');
 
 module.exports = function(app) {
 
@@ -47,15 +48,34 @@ module.exports = function(app) {
     app.post('/courses', function(req, res) {
         
         var course = new Course();
-        console.log(req.body);
         course.name = req.body.name;
-        course.numberOfModules = req.body.numberOfModules;
+        course.numberOfLevels = req.body.numberOfLevels;
+        course.creationDate = req.body.creationDate;
 
+        for(var i=0; i<course.numberOfLevels; i++){
+            var level = new Level();
+            level.name = "Level " + i;
+            level.courseName= course.name;
+            level.numberOfTopics=5;
+
+            level.save();
+        }
         course.save(function(err) {
             if (err)
                 res.send(err);
 
             res.json({ message: 'Course Created!' });
+        });
+        
+    });
+
+    app.get('/courses', function(req, res) {
+        console.log("Aqui estamos mijo");
+        Course.find(function(err, courses) {
+            if (err)
+                 res.send(err);
+ 
+            res.json(courses);
         });
         
     });
