@@ -69,7 +69,7 @@ module.exports = function(app) {
         
     });
 
-    app.get('/courses', function(req, res) {
+    app.get('/api/courses', function(req, res) {
         console.log("Aqui estamos mijo");
         Course.find(function(err, courses) {
             if (err)

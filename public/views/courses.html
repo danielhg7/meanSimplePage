@@ -4,8 +4,15 @@
     </div>
     <div class="col-lg-12">
     	<div class="row">
-    		<div ng-repeat="course in courses">
-			  {{course.name}}
+    		<div class="col-lg-5 jumbotron" ng-click="alertExample()" ng-repeat="course in courses">
+    			<div class="row">
+					<div class="col-lg-6">
+						<img src="assets/images/Flag_of_the_United_States.png" style="width: 180px; height: 110px;" class="img-thumbnail" alt="Cinque Terre">
+					</div>
+					<div class="col-lg-6">
+						<h3>{{course.name}}</h3>
+					</div>
+				</div>
 			</div>
     		<div class="col-lg-5 jumbotron" id="englishCourse" ng-click="alertExample()">
 				<div class="row">

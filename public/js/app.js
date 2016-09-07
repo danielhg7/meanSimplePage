@@ -21,7 +21,17 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'fi
 
         .when('/courses', {
             templateUrl: 'views/courses.html',
-            controller: 'CourseController'
+            controller: 'CourseController',
+            resolve: {
+
+				courses: function(Course, $window){
+					console.log("Por aqui 1,2,3");
+					return Course.query().$promise.then(function(data){
+						console.log("Va viento en popa");
+						return data;
+					});
+				}
+			}
         })
 
         .when('/courses/create', {
@@ -70,5 +80,6 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'fi
 				templateUrl: 'public/views/courses/show.html',
 				controller: 'CourseCtrl'
 			})
+
 
 	});

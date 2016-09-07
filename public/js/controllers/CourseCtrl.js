@@ -1,4 +1,4 @@
-angular.module('CourseCtrl', []).controller('CourseController', function($scope, Course, toastr, $state) {
+angular.module('CourseCtrl', []).controller('CourseController', function($scope, Course, toastr, $state, courses) {
 
 	$scope.course={
 		name: "",
@@ -6,19 +6,9 @@ angular.module('CourseCtrl', []).controller('CourseController', function($scope,
 		creationDate: new Date()
 	};
 
-	$scope.courses=[];
+	$scope.courses=courses;
 
 	console.log("Por aqui vamos bien");
-
-	$scope.courses=Course.query(function(data) {
-
-    	if(data) {
-      		$scope.courses=data.courses;
-        	console.log(data);
-        	$state.go('anon.course');
-    	}
-
-    });
 
 	$scope.createCourse = function() {
 		$scope.course.creationDate = new Date();

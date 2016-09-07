@@ -2,7 +2,7 @@ angular.module('CourseService', []).factory('Course', ['$resource', function($re
 
     
 
-    return $resource('/courses/:id', {id:"@_id"}, {
+    return $resource('/api/courses/:id', {id:"@_id"}, {
 
         query:{
             method:'GET',
