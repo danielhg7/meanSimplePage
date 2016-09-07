@@ -4,7 +4,7 @@
     </div>
     <div class="col-lg-12">
     	<div class="row">
-    		<div class="col-lg-5 jumbotron ng-course" ng-click="alertExample()" style="margin-right:90px;" ng-repeat="course in courses">
+    		<div class="col-lg-5 jumbotron ng-course" ng-repeat="course in courses" ng-click="showCourse(course.name)" style="margin-right:90px;">
     			<div class="row">
 					<div class="col-lg-6 col-lg-offset-4">
 						<h3>{{course.name}}</h3>

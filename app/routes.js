@@ -70,12 +70,26 @@ module.exports = function(app) {
     });
 
     app.get('/api/courses', function(req, res) {
-        console.log("Aqui estamos mijo");
+        console.log("QUe es lo que es");
         Course.find(function(err, courses) {
             if (err)
                  res.send(err);
  
             res.json(courses);
+        });
+        
+    });
+
+    app.get('/api/courses/:id', function(req, res) {
+        console.log("El microbio");
+        var name=req.params.id;
+        console.log(name);
+        Level.find({courseName:name}, function(err, levels) {
+            console.log(levels);
+            if (err)
+                 res.send(err);
+            
+            res.json(levels);
         });
         
     });

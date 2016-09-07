@@ -1,8 +1,8 @@
-angular.module('CourseService', []).factory('Course', ['$resource', function($resource) {
+angular.module('LevelService', []).factory('Level', ['$resource', function($resource) {
 
     
 
-    return $resource('/api/courses/:id', {id:"@_id"}, {
+    return $resource('/api/levels/:id', {id:"@_id"}, {
 
         query:{
             method:'GET',
@@ -11,8 +11,7 @@ angular.module('CourseService', []).factory('Course', ['$resource', function($re
 
         get:{
           method: 'GET',
-          params: {id: '@id'},
-          isArray: true
+          params: {id: '@id'}
         },
 
         update:{
