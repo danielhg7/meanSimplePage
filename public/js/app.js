@@ -36,7 +36,17 @@ angular.module('apreakApp', ['ngResource', 'ngRoute', 'ngAnimate', 'toastr', 'fi
 
         .when('/courses/create', {
             templateUrl: 'views/courses/create.html',
-            controller: 'CourseController'
+            controller: 'CourseController',
+            resolve: {
+
+				courses: function(Course, $window){
+					console.log("Por aqui 1,2,3");
+					return Course.query().$promise.then(function(data){
+						console.log("Va viento en popa");
+						return data;
+					});
+				}
+			}
         })
 
         .when('/courses/show', {

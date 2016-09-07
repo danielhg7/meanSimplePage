@@ -45,7 +45,7 @@ module.exports = function(app) {
         
     });
 
-    app.post('/courses', function(req, res) {
+    app.post('/api/courses', function(req, res) {
         
         var course = new Course();
         course.name = req.body.name;

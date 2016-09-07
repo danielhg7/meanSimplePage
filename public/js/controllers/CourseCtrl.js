@@ -8,8 +8,6 @@ angular.module('CourseCtrl', []).controller('CourseController', function($scope,
 
 	$scope.courses=courses;
 
-	console.log("Por aqui vamos bien");
-
 	$scope.createCourse = function() {
 		$scope.course.creationDate = new Date();
 		console.log($scope.course);
